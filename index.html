@@ -1,49 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>ТикТакБум</title>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" type="text/css"/>
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
+
 <body>
-<div class="container">
-    <div class="row align-items-center">
-        <div class="col col-md-8 offset-md-2">
-            <div class="row">
-                <h1>Тик-так-бум</h1>
-            </div>
-            <div class="row">
-                <span class="alert alert-primary" id="gameStatusField">Игра идёт</span>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="timer-output-wrapper">
-                        <div class="timer-output" id="timerField">
-                            00:00
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col col-md-8 offset-md-2">
+                <div class="row">
+                    <h1>Тик-так-бум</h1>
+                </div>
+                <div class="row">
+                    <span class="alert alert-primary" id="gameStatusField">Начните играть!</span>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="timer-output-wrapper">
+                            <div class="timer-output" id="timerField">
+                                00:00
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <h3 id="questionField"></h3>
-            </div>
-            <div class="row">
-                <div id="answer1" class="btn btn-primary form-control text-left answer"></div>
-            </div>
-            <div class="row">
-                <div id="answer2" class="btn btn-danger form-control text-left answer"></div>
+                <div class="row">
+                    <h3 id="questionField"></h3>
+                </div>
+
+                <div class="row">
+                    <div id="startBlock" class="input-group">
+                        <span class="input-group-btn">
+                          <button id="gameRun" class="btn btn-secondary" type="button">Старт игры</button>
+                        </span>
+                        <input id="inputTime" type="number" class="form-control" placeholder="Время игры">
+                        <input min="1" max="4" id="inputCountOfPlayers" type="number" class="form-control" placeholder="Число участников">
+                    </div>
+                </div>
+               
+                <div class="row">
+                    <div  id="inGameBlock">
+                        <div id="answer1" class="btn btn-primary form-control text-left answer"></div>
+                        <div id="answer2" class="btn btn-danger form-control text-left answer"></div>
+                        <div id="gameFinish" class="btn btn-danger form-control text-left gameFinish">Конец игры</div>
+                    </div>
+                    
+                </div>
             </div>
         </div>
     </div>
-</div>
-</div>
 
-<script src="js/utils.js"></script>
-<script src="js/tikTakBoom.js"></script>
-<script src="js/tikTakBoomTasks.js"></script>
-<script src="js/script.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/tikTakBoom.js"></script>
+    <script src="js/tikTakBoomTasks.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
